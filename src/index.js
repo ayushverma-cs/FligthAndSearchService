@@ -5,7 +5,7 @@ const { PORT } = require('./config/serverConfig');
 const apiRoutes = require('./routes/index');
 const  db = require('./models/index');
 const city = require('./models/city');
-//const {City, Airport} = require('./models/index');
+// const {Airplane} = require('./models/index');
 const { where } = require('sequelize');
 const sequelize = require('./models/index').sequelize;
 
@@ -22,6 +22,7 @@ const setupAndStartServer = async () => {
             if(process.env.SYNC_DB){
              db.sequelize.sync({ alter: true });
             }
+       
       
 
 
